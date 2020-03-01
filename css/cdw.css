@@ -1,0 +1,149 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+em{
+  font-style:normal;
+}
+#style-text{
+  position: absolute;
+  top:14%;
+  left:21%;
+  color:#fff;
+  background-color:transparent;
+  width: 570px;
+  height: 480px;
+
+  border: none;
+}
+
+.mainimg {
+  --border-width: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  font-family: Lato, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  background: #222;
+  border-radius: var(--border-width);
+  z-index:
+}
+.mainimg::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(60deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.mainimg{
+  width: 90%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#bs-example-navbar-collapse-1{
+  text-align: center;
+}
+.navbar-nav {
+  display: inline-block;
+  float:none;
+}
+.selector{
+  color:#e06c60;
+  font-family: 'Nanum Myeongjo' ;
+}
+.selector2{
+  color:#d17e43;
+  font-family: 'Nanum Myeongjo' ;
+}
+.selector3{
+  color:#56b6c2;
+  font-family: 'Nanum Myeongjo' ;
+}
+.selector4{
+  color:#fff;
+}
+#progress {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+}
+#progress > li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93A2AC;
+  font-family: Lato;
+  font-weight: 100;
+  margin: 2rem;
+
+}
+#progress > li:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400;
+}
+#progress > li:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+#progress svg {
+  width: 30rem;
+  height: 20rem;
+}
+#progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+#progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: #fff;
+  opacity: .9;
+  -webkit-animation: load 10s;
+          animation: load 10s;
+}
+.cta-quote{
+  background-size: 70%;
+}
+body{
+  
+}
